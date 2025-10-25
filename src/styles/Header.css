@@ -1,0 +1,142 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 32px 0;
+  transition: all 0.4s ease;
+}
+
+.header--scrolled {
+  background-color: rgba(245, 240, 233, 0.98);
+  padding: 20px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header--scrolled .header__logo-name,
+.header--scrolled .header__nav-link,
+.header--scrolled .header__cta {
+  color: var(--color-charcoal);
+}
+
+.header--scrolled .header__cta {
+  border-color: var(--color-charcoal);
+}
+
+.header__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Logo - Left */
+.header__logo {
+  justify-self: start;
+}
+
+.header__logo-name {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Navigation - Center */
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.header__nav-link {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  padding: 4px 0;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.header__nav-link:hover::after {
+  width: 100%;
+}
+
+.header__nav-separator {
+  color: white;
+  opacity: 0.5;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.header--scrolled .header__nav-separator {
+  color: var(--color-charcoal);
+}
+
+.header__lang {
+  font-weight: 600;
+}
+
+/* CTA Button - Right */
+.header__cta {
+  justify-self: end;
+  padding: 12px 28px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.header__cta:hover {
+  background-color: white;
+  color: var(--color-charcoal);
+}
+
+.header--scrolled .header__cta:hover {
+  background-color: var(--color-charcoal);
+  color: white;
+  border-color: var(--color-charcoal);
+}
+
+/* Mobile - Simplified for now */
+@media (max-width: 1024px) {
+  .header__container {
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+  }
+  
+  .header__nav {
+    display: none;
+  }
+}

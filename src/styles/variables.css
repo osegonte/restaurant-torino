@@ -1,0 +1,28 @@
+:root {
+  /* Colors - Torino Palette */
+  --color-cream: #f5f0e9;
+  --color-italian-red: #b82c2c;
+  --color-charcoal: #1a1a1a;
+  --color-white: #ffffff;
+  --color-dark-overlay: rgba(26, 26, 26, 0.4);
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+  
+  /* Spacing */
+  --container-max: 1400px;
+  --section-padding-desktop: 112px;
+  --section-padding-tablet: 80px;
+  --section-padding-mobile: 56px;
+  
+  /* Transitions */
+  --transition-fast: 300ms ease;
+  --transition-medium: 400ms ease-out;
+  --transition-slow: 600ms ease-out;
+  
+  /* Border Radius */
+  --radius-small: 4px;
+  --radius-medium: 16px;
+  --radius-large: 20px;
+}
