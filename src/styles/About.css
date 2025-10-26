@@ -1,0 +1,129 @@
+.about {
+  background-color: var(--color-cream);
+  padding: 120px 0;
+}
+
+.about__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Text Content - Left Side */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about__heading {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-charcoal);
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__paragraph {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Image - Right Side */
+.about__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+.about__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-medium);
+  box-shadow: 0 12px 40px rgba(26, 26, 26, 0.15);
+  overflow: hidden;
+  
+  /* Placeholder gradient until you add image */
+  background: linear-gradient(135deg, 
+    #D2691E 0%, 
+    #CD853F 50%, 
+    #DEB887 100%
+  );
+  
+  /* This will load your image when you add it */
+  background-image: url('../assets/images/about/interior.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about {
+    padding: 80px 0;
+  }
+  
+  .about__container {
+    padding: 0 60px;
+    gap: 60px;
+  }
+  
+  .about__heading {
+    font-size: 48px;
+  }
+  
+  .about__paragraph {
+    font-size: 16px;
+  }
+  
+  .about__image-wrapper {
+    min-height: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .about {
+    padding: 60px 0;
+  }
+  
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 0 24px;
+  }
+  
+  .about__heading {
+    font-size: 40px;
+  }
+  
+  .about__paragraph {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  
+  .about__image-wrapper {
+    min-height: 300px;
+    order: -1;
+  }
+}

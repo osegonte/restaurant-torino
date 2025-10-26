@@ -1,0 +1,227 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background Image - Just replace hero.jpg in src/assets/images/hero/ */
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  
+  /* Fallback gradient until you add your image */
+  background: linear-gradient(135deg, 
+    #8B4513 0%, 
+    #A0522D 25%, 
+    #CD853F 50%, 
+    #D2691E 75%, 
+    #8B4513 100%
+  );
+  
+  /* This will load your image when you add it */
+  background-image: url('../assets/images/hero/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay for text contrast */
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 26, 0.3) 0%,
+    rgba(26, 26, 26, 0.4) 50%,
+    rgba(26, 26, 26, 0.5) 100%
+  );
+}
+
+/* Content Container */
+.hero__content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  max-width: 1000px;
+  padding: 0 24px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text Styling */
+.hero__text {
+  margin-bottom: 64px;
+}
+
+/* A DISTINCTIVE TASTE... - WAY BIGGER & BOLDER */
+.hero__line {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 1;
+  line-height: 1.5;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero__welcome {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 40px 0 20px;
+  opacity: 0.95;
+}
+
+/* Restaurant Torino - MORE CLASSY FONT */
+.hero__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 96px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 4px;
+  line-height: 1.1;
+  margin: 0;
+  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Single View Menu Button - Centered, Lower */
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.hero__btn {
+  padding: 16px 48px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.hero__btn:hover {
+  background-color: white;
+  color: var(--color-charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Scroll Indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__scroll-dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0.4;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 600px;
+  }
+  
+  .hero__line {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+  
+  .hero__title {
+    font-size: 72px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero {
+    min-height: 500px;
+  }
+  
+  .hero__line {
+    font-size: 16px;
+    letter-spacing: 4px;
+  }
+  
+  .hero__welcome {
+    font-size: 11px;
+    margin: 32px 0 16px;
+  }
+  
+  .hero__title {
+    font-size: 52px;
+    letter-spacing: 3px;
+  }
+  
+  .hero__text {
+    margin-bottom: 48px;
+  }
+  
+  .hero__btn {
+    padding: 14px 36px;
+    font-size: 12px;
+  }
+  
+  .hero__scroll {
+    bottom: 32px;
+  }
+}

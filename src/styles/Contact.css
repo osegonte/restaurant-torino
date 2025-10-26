@@ -1,0 +1,153 @@
+.contact {
+  background-color: var(--color-cream);
+  padding: 120px 0;
+}
+
+.contact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.contact__header {
+  text-align: center;
+}
+
+.contact__heading {
+  font-family: var(--font-heading);
+  font-size: 52px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-charcoal);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.contact__details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+}
+
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.contact__icon {
+  flex-shrink: 0;
+  color: var(--color-italian-red);
+  opacity: 0.8;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.contact__label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  opacity: 0.5;
+}
+
+.contact__value {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-charcoal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact__value:hover {
+  color: var(--color-italian-red);
+}
+
+.contact__value p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact__cta {
+  margin-top: 16px;
+}
+
+.contact__button {
+  display: inline-block;
+  padding: 16px 48px;
+  background-color: var(--color-italian-red);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.contact__button:hover {
+  background-color: var(--color-charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(184, 44, 44, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    padding: 80px 0;
+  }
+  
+  .contact__container {
+    padding: 0 60px;
+  }
+  
+  .contact__heading {
+    font-size: 44px;
+  }
+  
+  .contact__details {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 60px 0;
+  }
+  
+  .contact__container {
+    padding: 0 24px;
+    gap: 48px;
+  }
+  
+  .contact__heading {
+    font-size: 36px;
+  }
+  
+  .contact__details {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .contact__button {
+    width: 100%;
+    text-align: center;
+  }
+}
