@@ -13,7 +13,6 @@
   align-items: center;
 }
 
-/* Text Content - Left Side */
 .about__content {
   display: flex;
   flex-direction: column;
@@ -47,7 +46,6 @@
   opacity: 0.9;
 }
 
-/* Image - Right Side */
 .about__image-wrapper {
   position: relative;
   width: 100%;
@@ -62,15 +60,11 @@
   border-radius: var(--radius-medium);
   box-shadow: 0 12px 40px rgba(26, 26, 26, 0.15);
   overflow: hidden;
-  
-  /* Placeholder gradient until you add image */
   background: linear-gradient(135deg, 
     #D2691E 0%, 
     #CD853F 50%, 
     #DEB887 100%
   );
-  
-  /* This will load your image when you add it */
   background-image: url('../assets/images/about/interior.jpg');
   background-size: cover;
   background-position: center;
@@ -84,7 +78,7 @@
   }
   
   .about__container {
-    padding: 0 60px;
+    padding: 0 40px;
     gap: 60px;
   }
   
@@ -109,12 +103,20 @@
   
   .about__container {
     grid-template-columns: 1fr;
-    gap: 48px;
-    padding: 0 24px;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .about__content {
+    gap: 24px;
   }
   
   .about__heading {
-    font-size: 40px;
+    font-size: 36px;
+  }
+  
+  .about__text {
+    gap: 20px;
   }
   
   .about__paragraph {
@@ -123,7 +125,26 @@
   }
   
   .about__image-wrapper {
-    min-height: 300px;
+    min-height: 280px;
     order: -1;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .about {
+    padding: 48px 0;
+  }
+  
+  .about__heading {
+    font-size: 32px;
+  }
+  
+  .about__paragraph {
+    font-size: 14px;
+  }
+  
+  .about__image-wrapper {
+    min-height: 240px;
   }
 }

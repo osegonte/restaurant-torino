@@ -9,7 +9,6 @@
   overflow: hidden;
 }
 
-/* Background Image - Just replace hero.jpg in src/assets/images/hero/ */
 .hero__background {
   position: absolute;
   top: 0;
@@ -17,8 +16,6 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-  
-  /* Fallback gradient until you add your image */
   background: linear-gradient(135deg, 
     #8B4513 0%, 
     #A0522D 25%, 
@@ -26,15 +23,12 @@
     #D2691E 75%, 
     #8B4513 100%
   );
-  
-  /* This will load your image when you add it */
   background-image: url('../assets/images/hero/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Dark overlay for text contrast */
 .hero__overlay {
   position: absolute;
   top: 0;
@@ -50,7 +44,6 @@
   );
 }
 
-/* Content Container */
 .hero__content {
   position: relative;
   z-index: 3;
@@ -72,12 +65,10 @@
   }
 }
 
-/* Text Styling */
 .hero__text {
   margin-bottom: 64px;
 }
 
-/* A DISTINCTIVE TASTE... - WAY BIGGER & BOLDER */
 .hero__line {
   font-family: var(--font-body);
   font-size: 24px;
@@ -100,7 +91,6 @@
   opacity: 0.95;
 }
 
-/* Restaurant Torino - MORE CLASSY FONT */
 .hero__title {
   font-family: 'Playfair Display', serif;
   font-size: 96px;
@@ -112,7 +102,6 @@
   text-shadow: 0 3px 24px rgba(0, 0, 0, 0.5);
 }
 
-/* Single View Menu Button - Centered, Lower */
 .hero__buttons {
   display: flex;
   justify-content: center;
@@ -142,7 +131,6 @@
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
-/* Scroll Indicator */
 .hero__scroll {
   position: absolute;
   bottom: 48px;
@@ -182,46 +170,76 @@
   }
   
   .hero__line {
-    font-size: 20px;
-    letter-spacing: 5px;
+    font-size: 18px;
+    letter-spacing: 4px;
   }
   
   .hero__title {
-    font-size: 72px;
+    font-size: 64px;
+  }
+  
+  .hero__btn {
+    padding: 14px 40px;
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
   .hero {
-    min-height: 500px;
+    min-height: calc(100vh - 140px);
+    padding-top: 140px;
+  }
+  
+  .hero__content {
+    padding: 0 20px;
   }
   
   .hero__line {
-    font-size: 16px;
-    letter-spacing: 4px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
   }
   
   .hero__welcome {
-    font-size: 11px;
-    margin: 32px 0 16px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin: 24px 0 12px;
   }
   
   .hero__title {
-    font-size: 52px;
-    letter-spacing: 3px;
+    font-size: 48px;
+    letter-spacing: 2px;
   }
   
   .hero__text {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
   
   .hero__btn {
     padding: 14px 36px;
-    font-size: 12px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    max-width: 280px;
   }
   
   .hero__scroll {
-    bottom: 32px;
+    bottom: 24px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hero__line {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  
+  .hero__title {
+    font-size: 40px;
+  }
+  
+  .hero__btn {
+    font-size: 10px;
   }
 }
